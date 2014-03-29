@@ -1,0 +1,23 @@
+!!!
+%html.no-js{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    / Use title if it's in the page YAML frontmatter
+    %title= data.page.title || "The Middleman"
+    = stylesheet_link_tag "app"
+  %body{class: page_classes}
+    = yield
+    = javascript_include_tag "app"
+
+    -# Typekit
+    -# %script{:src => "//use.typekit.net/id", :type => "text/javascript"}
+    -# :javascript
+    -#   try{Typekit.load();}catch(e){}
+
+    -# Google Analytics
+    -# :javascript
+    -#   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    -#   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    -#   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    -#   s.parentNode.insertBefore(g,s)}(document,'script'));
