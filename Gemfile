@@ -2,8 +2,9 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~>3.2.2"
-gem 'foundation_middleman', '~>0.0.2', require: false
+gem "middleman"
+gem "middleman-livereload"
+gem "middleman-minify-html"
+gem "zurb-foundation"
+gem "ruby"
 
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
