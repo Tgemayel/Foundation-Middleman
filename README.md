@@ -41,7 +41,7 @@ $ bundle install
 
 # Run the server 
 $ bundle exec middleman server
-
+```
 
 Viola. You will see the output from Middleman now running locally at [http://localhost:4567](http://localhost:4567)
 
