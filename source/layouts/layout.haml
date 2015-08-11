@@ -3,12 +3,13 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    / Use title if it's in the page YAML frontmatter
-    %title= data.page.title || "The Middleman"
+    %title= data.page.title || data.site.title
+
     = stylesheet_link_tag "app"
+    = javascript_include_tag "vendor/modernizr"
+
   %body{class: page_classes}
     = yield
-    = javascript_include_tag "app"
 
     -# Typekit
     -# %script{:src => "//use.typekit.net/id", :type => "text/javascript"}
@@ -24,17 +25,4 @@
 
 
   %script{:src => "javascripts/vendor/jquery.js"}
-  %script{:src => "javascripts/foundation/foundation.js"}
-  %script{:src => "javascripts/foundation/foundation.section.js"}
-  %script{:src => "javascripts/foundation/foundation.clearing.js"}
-  %script{:src => "javascripts/foundation/foundation.cookie.js"}
-  %script{:src => "javascripts/foundation/foundation.forms.js"}
-  %script{:src => "javascripts/foundation/foundation.orbit.js"}
-  %script{:src => "javascripts/foundation/foundation.topbar.js"}
-  %script{:src => "javascripts/foundation/foundation.placeholder.js"}
-  %script{:src => "javascripts/foundation/foundation.reveal.js"}
-  %script{:src => "javascripts/foundation/foundation.alerts.js"}
-  %script{:src => "javascripts/foundation/foundation.magellan.js"}
-  %script{:src => "javascripts/foundation/foundation.dropdown.js"}
-  %script{:src => "javascripts/foundation/foundation.joyride.js"}
-  %script{:src => "javascripts/foundation/foundation.tooltips.js"}
+  %script{:src => "javascripts/foundation/foundation.min.js"}

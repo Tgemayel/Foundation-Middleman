@@ -6,7 +6,7 @@ set :debug_assets, true
 
 activate :livereload
 
-Sass.load_paths << "bower_components/foundation/sass"
+Sass.load_paths << "bower_components/foundation/scss"
 
 # Build-specific configuration
 configure :build do
